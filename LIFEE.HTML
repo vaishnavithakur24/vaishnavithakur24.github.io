@@ -1,0 +1,1180 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Vaishnavi Thakur | Java Developer</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #111827;
+
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #3b82f6;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+
+            margin-left: 22px;
+
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 80px 8%;
+
+            background: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h4 {
+            color: #2563eb;
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+
+            color: #111827;
+
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+
+            color: #555;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+
+            color: #555;
+
+            max-width: 750px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .btn {
+            display: inline-block;
+
+            background: #2563eb;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            margin-right: 10px;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+
+            color: #2563eb;
+
+            border: 2px solid #2563eb;
+        }
+
+        .btn-outline:hover {
+            background: #2563eb;
+
+            color: white;
+        }
+
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: 35px;
+
+            margin-bottom: 45px;
+
+            color: #111827;
+        }
+
+        .section-title span {
+            color: #2563eb;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #eef2ff;
+        }
+
+        .about-container {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .about-container p {
+            font-size: 18px;
+
+            color: #555;
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        .skills-container {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+
+            padding: 12px 20px;
+
+            border-radius: 8px;
+
+            border: 1px solid #e5e7eb;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 3px 10px rgba(0,0,0,0.05);
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-4px);
+
+            border-color: #2563eb;
+        }
+
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience {
+            background: #eef2ff;
+        }
+
+        .cards {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 28px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2563eb;
+
+            margin-bottom: 5px;
+        }
+
+        .card .date {
+            color: #777;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+
+        /* ================= PROJECTS ================= */
+
+        .projects-container {
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(350px, 1fr));
+
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.08);
+
+            border-top: 4px solid #2563eb;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #555;
+
+            margin-bottom: 18px;
+        }
+
+        .project-card ul {
+            margin-left: 20px;
+
+            margin-bottom: 20px;
+
+            color: #555;
+        }
+
+        .project-card li {
+            margin-bottom: 7px;
+        }
+
+        .project-link {
+            color: #2563eb;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= EDUCATION ================= */
+
+        .education {
+            background: #eef2ff;
+        }
+
+        .education-box {
+            max-width: 900px;
+
+            margin: 15px auto;
+
+            background: white;
+
+            padding: 25px;
+
+            border-left: 5px solid #2563eb;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .education-box h3 {
+            color: #2563eb;
+        }
+
+        .education-box p {
+            color: #555;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: #111827;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            margin: 10px;
+
+            font-size: 17px;
+        }
+
+        .contact a {
+            color: #60a5fa;
+
+            text-decoration: none;
+        }
+
+        .social-buttons {
+            margin-top: 25px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #0b1120;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 768px) {
+
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 15px;
+
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+
+                margin: 5px;
+
+                font-size: 13px;
+            }
+
+            .hero {
+                text-align: center;
+
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <div class="logo">
+        Vaishnavi<span>.</span>
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#experience">Experience</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#education">Education</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h4>Hello, I'm</h4>
+
+        <h1>
+            Vaishnavi <span>Thakur</span>
+        </h1>
+
+        <h2>
+            Java Developer | Software Engineer | ECE Graduate
+        </h2>
+
+        <p>
+
+            Motivated B.Tech graduate in Electronics and Communication
+            Engineering with hands-on experience in Java Full Stack
+            Development, Core Java, Spring Boot, SQL, HTML and CSS.
+
+            I also have practical experience in IoT, embedded systems,
+            hardware testing and robotics-based projects.
+
+        </p>
+
+        <a href="#projects" class="btn">
+            View My Projects
+        </a>
+
+        <a
+            href="https://github.com/vaishnavithakur24"
+            target="_blank"
+            class="btn btn-outline">
+
+            GitHub
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">
+        About <span>Me</span>
+    </h2>
+
+    <div class="about-container">
+
+        <p>
+
+            I am a B.Tech graduate in Electronics and Communication
+            Engineering from MIT ADT University, Pune.
+
+            I have hands-on knowledge of Core Java, Advanced Java,
+            Object-Oriented Programming, Spring Boot, REST APIs,
+            SQL and MySQL.
+
+            Along with software development, I have experience in
+            IoT, embedded systems, hardware and PCB testing,
+            automotive electronics and robotics projects.
+
+            I am looking for an entry-level Java Developer,
+            Software Engineer or Graduate Engineer opportunity
+            where I can contribute, learn and grow.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <h2 class="section-title">
+        Technical <span>Skills</span>
+    </h2>
+
+
+    <div class="skills-container">
+
+        <!-- Programming -->
+
+        <div class="skill">Core Java</div>
+
+        <div class="skill">Advanced Java</div>
+
+        <div class="skill">OOP</div>
+
+        <div class="skill">Spring Boot</div>
+
+        <div class="skill">REST APIs</div>
+
+        <div class="skill">MySQL</div>
+
+        <div class="skill">SQL</div>
+
+        <div class="skill">Maven</div>
+
+        <div class="skill">HTML</div>
+
+        <div class="skill">CSS</div>
+
+        <div class="skill">Git</div>
+
+        <div class="skill">GitHub</div>
+
+        <div class="skill">Basic Python</div>
+
+
+        <!-- Electronics -->
+
+        <div class="skill">C Language</div>
+
+        <div class="skill">IoT</div>
+
+        <div class="skill">Embedded Systems</div>
+
+        <div class="skill">Circuit Design</div>
+
+        <div class="skill">Hardware Testing</div>
+
+        <div class="skill">PCB Testing</div>
+
+        <div class="skill">Automotive Electronics</div>
+
+        <div class="skill">MATLAB</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section class="experience" id="experience">
+
+    <h2 class="section-title">
+        Work <span>Experience</span>
+    </h2>
+
+
+    <div class="cards">
+
+
+        <!-- ARNITA -->
+
+        <div class="card">
+
+            <h3>
+                Java Intern
+            </h3>
+
+            <div class="date">
+                ARNITA INFOTECH, Pune | Jan 2026
+            </div>
+
+            <p>
+
+                Developed Java applications using
+                Object-Oriented Programming concepts.
+
+                Assisted in debugging and testing software
+                applications.
+
+                Collaborated with the development team
+                following coding best practices.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- KODBUD -->
+
+        <div class="card">
+
+            <h3>
+                Java Intern
+            </h3>
+
+            <div class="date">
+                KODBUD | Feb 2026
+            </div>
+
+            <p>
+
+                Developed 8 Java-based applications using
+                Core Java.
+
+                Implemented OOP concepts, Arrays, ArrayList,
+                Methods and Multithreading.
+
+                Built projects including ATM Simulation,
+                Library Management System, Student Grade
+                Management System, Login System and
+                Digital Clock.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- STAR ENGINEERS -->
+
+        <div class="card">
+
+            <h3>
+                Hardware Test Engineer Trainee
+            </h3>
+
+            <div class="date">
+                STAR ENGINEERS INDIA PVT. LTD., Pune
+                | Apr 2026 – Jul 2026
+            </div>
+
+            <p>
+
+                Performed hardware and PCB testing for
+                automotive electronic modules.
+
+                Identified and documented hardware defects
+                following SOPs.
+
+                Prepared testing reports and collaborated
+                with the quality team.
+
+                Ensured product compliance with quality
+                standards.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <h2 class="section-title">
+        My <span>Projects</span>
+    </h2>
+
+
+    <div class="projects-container">
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+            <h3>
+                Smart Grocery Basket –
+                E-commerce Web Application
+            </h3>
+
+            <p>
+
+                Developed an e-commerce web application
+                for grocery shopping, allowing users to
+                explore grocery products and view product
+                information.
+
+            </p>
+
+            <ul>
+
+                <li>
+                    Product listing and product details
+                </li>
+
+                <li>
+                    Grocery categories
+                </li>
+
+                <li>
+                    Product pricing
+                </li>
+
+                <li>
+                    Offers and discounts
+                </li>
+
+                <li>
+                    Shopping and billing functionality
+                </li>
+
+                <li>
+                    Payment-related options
+                </li>
+
+            </ul>
+
+            <p>
+                <strong>Technology:</strong>
+                Java, Spring Boot, MySQL, SQL, HTML, CSS
+            </p>
+
+            <a
+                href="https://github.com/vaishnavithakur24/SmartGroceryBasket1"
+                target="_blank"
+                class="project-link">
+
+                View Project on GitHub →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+            <h3>
+                Smart Grocery Basket –
+                Automatic Following & Smart Billing Robot
+            </h3>
+
+            <p>
+
+                Developed a smart robotic grocery basket
+                that combines automatic user following,
+                barcode-based product scanning, smart billing
+                and an online shopping web interface.
+
+            </p>
+
+            <ul>
+
+                <li>
+                    Automatic following using
+                    <strong>UWB modules</strong>
+                </li>
+
+                <li>
+                    Main controller using
+                    <strong>Raspberry Pi</strong>
+                </li>
+
+                <li>
+                    Motor control using
+                    <strong>L293D motor driver</strong>
+                </li>
+
+                <li>
+                    DC motors for robotic movement
+                </li>
+
+                <li>
+                    <strong>Barcode scanner</strong>
+                    for product identification
+                </li>
+
+                <li>
+                    <strong>Ultrasonic sensor</strong>
+                    for obstacle detection
+                </li>
+
+                <li>
+                    Raspberry Pi touchscreen/display
+                    for user interaction
+                </li>
+
+                <li>
+                    Online shopping web interface
+                    integrated with the smart basket
+                </li>
+
+                <li>
+                    Automatic billing based on scanned
+                    grocery products
+                </li>
+
+            </ul>
+
+            <p>
+
+                <strong>Hardware:</strong>
+                Raspberry Pi, UWB Modules,
+                L293D Motor Driver, Motors,
+                Barcode Scanner, Ultrasonic Sensor,
+                Touchscreen/Display
+
+            </p>
+
+            <p>
+
+                <strong>Concepts:</strong>
+                Robotics, IoT, Embedded Systems,
+                Automatic Following, Smart Billing,
+                Barcode Scanning and Online Shopping
+
+            </p>
+
+            <a
+                href="https://github.com/vaishnavithakur24/SmartGroceryBasket1"
+                target="_blank"
+                class="project-link">
+
+                View Project on GitHub →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="project-card">
+
+            <h3>
+                Home Automation Using Voice Command
+            </h3>
+
+            <p>
+
+                Developed an IoT-based home automation
+                system using ESP8266 and relay modules
+                to control electrical appliances through
+                voice commands.
+
+            </p>
+
+            <p>
+                <strong>Technology:</strong>
+                ESP8266, Relay Module, IoT
+            </p>
+
+        </div>
+
+
+
+        <!-- PROJECT 4 -->
+
+        <div class="project-card">
+
+            <h3>
+                FM Transmitter
+            </h3>
+
+            <p>
+
+                Designed and developed an FM transmitter
+                based on electronic circuit concepts and
+                wireless communication principles.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- PROJECT 5 -->
+
+        <div class="project-card">
+
+            <h3>
+                LPG Gas Leakage Detection System
+            </h3>
+
+            <p>
+
+                Developed an IoT-based LPG gas leakage
+                detection system using a gas sensor and
+                microcontroller to detect leakage and
+                provide alerts.
+
+            </p>
+
+            <p>
+                <strong>Technology:</strong>
+                NodeMCU, MQ-6 Sensor, IoT
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="education" id="education">
+
+    <h2 class="section-title">
+        <span>Education</span>
+    </h2>
+
+
+    <div class="education-box">
+
+        <h3>
+            Bachelor of Technology
+        </h3>
+
+        <p>
+            Electronics and Communication Engineering
+        </p>
+
+        <p>
+            MIT ADT University, Pune
+        </p>
+
+        <p>
+            2023 – 2026
+        </p>
+
+        <p>
+            CGPA: 7.14
+        </p>
+
+    </div>
+
+
+
+    <div class="education-box">
+
+        <h3>
+            Diploma in Electronics and
+            Telecommunication Engineering
+        </h3>
+
+        <p>
+            VAPM, Almala, Latur
+        </p>
+
+        <p>
+            2020 – 2023
+        </p>
+
+    </div>
+
+
+
+    <div class="education-box">
+
+        <h3>
+            Secondary School
+        </h3>
+
+        <p>
+            Maharashtra State Board
+        </p>
+
+        <p>
+            2020
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Let's <span>Connect</span>
+    </h2>
+
+    <p>
+        📧
+        <a href="mailto:vaishnavit833@gmail.com">
+            vaishnavit833@gmail.com
+        </a>
+    </p>
+
+    <p>
+        📱 +91 8766928150
+    </p>
+
+    <p>
+        📍 Pune, Maharashtra
+    </p>
+
+
+    <div class="social-buttons">
+
+        <a
+            href="https://linkedin.com/in/vaishnavi-thakur-a716a32a6"
+            target="_blank"
+            class="btn">
+
+            LinkedIn
+
+        </a>
+
+
+        <a
+            href="https://github.com/vaishnavithakur24"
+            target="_blank"
+            class="btn">
+
+            GitHub
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Vaishnavi Thakur.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
